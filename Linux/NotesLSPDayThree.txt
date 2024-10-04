@@ -1,0 +1,61 @@
+0000 0000
+
+0111 1111 --> 127
+
+1000 0000 --> 128
+=====================================================
+
+exec family of functions 
+-------------------------
+		We know fork() creates a new process. What if I want to execute an existing program/command/script. Here instead of writing logic from scratch it is also better sometimes to use existing programs 
+		
+		If any one of the exec family functions is used to run a program/command/script, the commands memory image will replace my process image 
+		
+		These exec family of functions start with the name exec followed by any one more of these characters (vle)
+			v - vector(array)
+			l - list 
+			e - environment variables 
+			p - pathname rather than filename 
+			
+		list --> "/bin/ls", "/bin/ls" ,"-l", "-r" ,"-t" , "/", NULL
+		
+		char *myArgs[] = {"/bin/ls" ,"-l", "-r" ,"-t" , "/", NULL};
+		
+		vector --> myArgs
+		
+		pathname --> "/bin/ls"
+		file  --> "ls"
+
+		IPC (Inter process Communication):
+		----------------------------------
+			pipes   (Half duplex) 
+				un-named pipes 
+				named pipes (FIFO)
+				
+			Signals (software interrupts)
+			System V IPC  (Kernel Level)
+				Message Queues 
+				Shared Memory 
+				Semaphore sets 
+			POSIX IPC (Kernel Level)
+				Message Queues 
+				Shared Memory 
+				Semaphore sets 
+			Sockets (Full Duplex)
+				
+					
+				
+				
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

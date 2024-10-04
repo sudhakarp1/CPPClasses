@@ -1,0 +1,53 @@
+///
+In Inheritance:
+	--> Is a relationship
+	You go for inheritance when there 'Is A' Relationship
+
+		Derived class IS A Base class 
+		
+				MediaPlayer   play(), pause(), stop(), forward(), rewind()
+				     |
+					 |
+		------------------------------------
+		|									|
+	AudioPlayer							VideoPlayer
+		|									|
+-------------------					------------------------
+|		|		  |				   |    	 |			   |	
+MP3	  wav		aac				MP4			FLV			 MKV
+	
+play(), 
+pause(), 
+stop(), 
+forward(),
+ rewind()	
+========================================================	
+	https://tinyurl.com/bdddxkc9
+========================================================
+
+
+	
+ABC ob = 10 + ob;
+
+friend ABC operator+(int , const ABC&);
+
+
+IO Handling and File Handling:
+============================
+						ios_base
+						   |
+						   |
+						  ios 	
+						  /  \
+						 /	  \
+					istream   ostream
+					 |	\	    /  |
+					 |	  \  /	   |	
+				 ifstream iostream 	ofstream
+						    |
+							|
+						 fstream	
+						   
+	
+					iostream
+=====================================================================

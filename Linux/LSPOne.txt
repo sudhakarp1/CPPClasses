@@ -1,0 +1,36 @@
+In Linux, the File Descriptor (FD) table is a data structure used by the kernel to manage open files and I/O streams. Each process has its own FD table, which is an array of pointers to file descriptors. Here’s a brief overview:
+
+### Key Concepts
+
+1. **File Descriptors**:
+   - Integer handles (usually starting from 0) that represent an open file or socket.
+   - The first three file descriptors are conventionally:
+     - `0`: Standard Input (stdin)
+     - `1`: Standard Output (stdout)
+     - `2`: Standard Error (stderr)
+
+2. **File Descriptor Table**:
+   - Each process maintains its own FD table in kernel memory.
+   - Each entry points to a file structure that contains metadata about the open file (like its location on disk, access modes, etc.).
+
+3. **Limitations**:
+   - The default limit for open file descriptors can vary (often 1024), but it can be increased using commands like `ulimit` or by modifying system configurations.
+
+4. **Operations**:
+   - Common operations include opening a file (`open()`), closing a file (`close()`), and manipulating file descriptors (`dup()`, `dup2()`).
+
+5. **Shared File Descriptors**:
+   - When a process forks, the child inherits the parent's FD table, allowing both processes to share access to the same open files.
+
+### Example
+
+When a program opens a file:
+
+1. It calls the `open()` system call.
+2. The kernel finds an available entry in the process's FD table.
+3. It allocates a file structure and updates the FD table with a pointer to this structure.
+4. The program can then use the returned file descriptor to read from or write to the file.
+
+### Conclusion
+
+The FD table is a fundamental part of the Linux I/O system, enabling efficient file handling and resource management across processes. Understanding it is crucial for effective system programming and troubleshooting.

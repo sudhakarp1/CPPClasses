@@ -1,0 +1,40 @@
+Day 14:
+-------
+	memory alignment in OS --> Structure padding in C
+	
+struct ABC{
+	int a;  // 0--> 3
+	float b; //4-7
+	double c;//8-15	
+};
+	
+struct ABC{
+	double c;//0-7
+	int a;  // 8-11
+	float b; //12 - 15	
+};	
+
+struct ABC{
+	int a;  // 0 - 3 --> 4-7
+	double c;//8-15
+	float b; //16-19 --> 20-23
+};	
+
+==============================
+Derived -->
+	int 
+	double 
+	
+========================================================================
+
+
+
+
+
+
+
+
+
+
+
+

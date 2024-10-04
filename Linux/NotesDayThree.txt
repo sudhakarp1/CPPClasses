@@ -1,0 +1,95 @@
+Day Three:
+----------
+	Shell Scripting Continues...	
+	
+	 https://cloud.cdp.rpsconsulting.in/console/#
+	 
+	user  :	 24STA2620-U01
+	passwd:	 Password@1	
+---------------------------------------------------------
+if command
+then
+	commands 
+	commands 	
+	commands 
+fi 
+===============
+if command
+then
+	commands 
+	commands 	
+else
+	commands 
+fi 
+========================
+if command
+then
+	commands 
+elif command
+	commands 	
+else
+	commands 
+fi 
+=======================================
+case var in 
+1)
+	commands
+	commands
+	;;
+2)
+	commands
+	commands
+	;;
+*)
+	commands
+	commands
+	;;
+esac 
+
+==========================================
+cnt=1
+while [ $cnt -le 10 ];
+do
+	echo $cnt 
+	cnt=`expr $cnt + 1`
+done 
+	
+for var in list
+do 
+	echo $var 
+done 
+
+
+for var in {1..10}
+do 
+	echo $var 
+done 
+===================================================================
+1	24STA2620-U01	Password@1
+
+URL : https://cloud.cdp.rpsconsulting.in/console/#
+
+inside your windows VM
+	open oracleVM Virtual box 
+		start the ubuntu OS
+				user name : rps 
+				password : rps@123
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+
+
+
+
+
+

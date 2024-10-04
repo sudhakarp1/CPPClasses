@@ -1,0 +1,102 @@
+	
+Part of C++ 	
+	Scope resolution operator (::) 	
+	Namespace std
+	
+	Reference variable in C++
+	Function in C++
+		Function signature:
+			name of the function, the number of arguments, type(data) of arguments and the order of arguments passed 
+			
+			Remember : return type is not considered
+			
+			
+		Function overloading 
+			Two or more function having same name with different signature
+			
+			Name mangling/decoration
+				void fun();  --> _Z3funv
+				void fun(int);  ---> _Z3funi
+				void fun(int,int); ---> _Z3funii
+				void fun(double, double);  --> _Z3fundd
+				void fun(int,double);   ---> _Z3funid
+				void fun(double, int)  ---> _Z3fundi
+				
+				
+				
+"void __cdecl fun(double,double)" (?fun@@YAXNN@Z) 
+void __cdecl fun(double,int)" (?fun@@YAXNH@Z) 
+ "void __cdecl fun(int)" (?fun@@YAXH@Z) 
+ "void __cdecl fun(int,double)" (?fun@@YAXHN@Z)
+ "void __cdecl fun(int,int)" (?fun@@YAXHH@Z) 
+ "void __cdecl fun(void)" (?fun@@YAXXZ) 
+ 
+	Function with default args 
+	--------------------------
+		float 32 bits --> 1 8 23
+		double 64 bits -->1 11 52
+		
+=============================================================
+Class and Objects 
+=================
+myArray.cpp
+----------- 
+	class MyArray{
+	public:
+		void initialize(int sz = MAX);
+		void fillArray(int first = 1);
+		void printArray();
+	private:
+		enum {MAX=100};
+		int arr[MAX];
+		int size;
+	};
+	
+myMatrix.cpp
+----------- 
+	class MyMatrix{
+	public:
+		void initialize(int rSize = MAX, int cSize = MAX);
+		void fillMatrix(int first = 1);
+		void printMatrix();
+	private:
+		enum {MAX=100};
+		int mat[MAX][MAX];
+		int row, col;
+	};	
+myString.cpp 
+------------
+	class MyString{
+	public:
+		void initialize(const char *st = "Some string here");		
+		void printString();
+	private:
+		enum {MAX=100};
+		char arr[MAX];
+		int size;
+	};
+employee.cpp 
+------------
+class Employee{
+	public:
+		void initialize(int id, const char *nm, double sal);
+		void print();
+	private:
+		int id;
+		string name; 
+		double salary;
+};	
+
+========================================================
+Constructors and Destructor
+---------------------------
+	These are all special methods/member functions in a class.
+	1. the name is same as class name 
+	2. do not have any return type not even void 
+	3. the are automatically called when an object is created.
+	
+	Destructor:
+		~className(){
+		} 
+		
+		

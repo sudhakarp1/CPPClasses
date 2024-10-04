@@ -1,0 +1,55 @@
+=================================================================
+				first.cpp (ASCII)
+					|
+					| ---> pre-processing 
+					|
+				source Code (.i)
+					|
+					| ---> compilation(Phase I) ()
+					|
+				object Code (.o)
+					|
+					| ---> linking(Phase II)
+					|
+				first/a.out (excutable /binary)
+======================================================
+In 1998, C++98 was released, standardizing the language, and a minor update (C++03) was released in 2003.
+
+After C++98, C++ evolved relatively slowly until, in 2011, the C++11 standard was released, adding numerous new features, enlarging the standard library further, and providing more facilities to C++ programmers. After a minor C++14 update released in December 2014, various new additions were introduced in C++17.[After becoming finalized in February 2020,a draft of the C++20 standard was approved on 4 September 2020, and officially published on 15 December 2020.
+
+On January 3, 2018, Stroustrup was announced as the 2018 winner of the Charles Stark Draper Prize for Engineering, "for conceptualizing and developing the C++ programming language".
+
+As of December 2022, C++ ranked third on the TIOBE index, surpassing Java for the first time in the history of the index. It ranks third, after Python and C.
+
+
+
+
+
+
+	Originally C++ was introduced in 1980
+		Bjarne Stroustrup
+		ISO C++ --> 1998 (C++ 98)
+		2003 --> (C++ 03)
+		2011 --> (C++ 0x or C++ 11) --> Modern C++
+==================================================================
+https://tinyurl.com/4ndh58ms
+
+	
+================================================================
+	Pointers Intro
+		Syntax
+			Pointer arithmetic
+			Pointers and arrays 		
+			Pointers and functions
+		------------	
+	Reference variable in C++
+	scope resolution operator 
+	
+
+
+
+
+
+
+
+

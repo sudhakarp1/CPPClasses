@@ -1,0 +1,337 @@
+cd tcs/
+ls
+ls -a
+mkdir .Old
+mv * .Old/
+ls
+ls -a
+mv .assign .cRefresher .Old
+ls
+ls 
+ls -a
+ls -A
+ls 
+ls /
+pwd
+ls
+ls -a
+ls -A
+ls -l 
+ls -l /
+ls  /
+ping www.google.com -c4
+ls /
+cat /etc/shells 
+ls -a
+ls -la
+ls -l -a
+cmd
+man bash
+alias
+la 
+cls
+clear
+alias cls=clear
+cls
+alias
+unalias cls
+cls
+alias cls=clear
+alias
+cls
+alias cls=clear
+cls
+man builtin
+man builtins
+b
+ls
+cd tcs
+ls
+touch a A aa aA Aa AA 
+ls
+ls -l
+cd ..
+ls -l
+ls -ls
+ls -l
+cd tcs
+ls -l
+cat > A
+ls -l
+ls -ls
+ls -i
+ls -il
+man ls
+date
+man date
+date
+date +%d
+date +%D
+date +%d/%m/%Y
+man date
+date +%d-%b
+date +%d-%b-%Y
+date +'%dnd %b of %Y'
+date +'%-dnd %b of %Y'
+man date
+date +%d-%B
+date +'%-dnd %B of %Y'
+date +%s
+pwd
+echo ~
+cd /
+cd ~
+cd /
+cd /usr/bin
+cd 
+cd ../../usr/bin/
+pwd
+cd tcs
+cd ~/tcs
+ls
+pwd
+mkdir dirOne/dirTwo/dirThree
+mkdir dirOne/dirTwo/dirThree -p
+ls
+ls -R
+mv a? dirOne/dirTwo/dirThree
+ls dirOne/dirTwo/dirThree
+mv dirOne/dirTwo/dirThree/* .
+ls
+ls dirOne/dirTwo/dirThree
+echo abc{1,2,3}.txt
+echo abc{1..3}.txt
+echo abc{1..30}.txt
+ls
+touch abc{1..30}.txt
+ls
+ls abc{11..15}*
+ls abc[1]?.txt
+ls abc[1][1-5].txt
+ls abc[12][1-5].txt
+ls abc[2][1-5].txt
+ls abc?[1-5].txt
+ls abc1[1-5].txt
+ls abc1{1..5}.txt
+ls abc1[1-5].txt
+mv abc1[1-5].txt dirOne/dirTwo/
+ls
+ls abc1[1-5].txt
+man rmdir
+info ls
+man standards
+cat 
+ls
+ls -l
+cat A
+cat A adsf.txt
+cat A 1
+cat A -n
+exit
+cd tcs/
+ls
+rm abc*
+ls
+ls -l
+id
+ls -l A a
+chmod u+x A a
+ls -l A a
+chmod u-x A a
+ls -l A a
+chmod 755 a A 
+ls -l A a
+id
+ls -l a A
+chgrp test A a
+ls -l a A
+cat /etc/passwd
+ls -l a A
+sudo chown testOne a
+ls -l a A
+chmod 755 a
+cat > a
+cat >> A
+cat A
+cat > A
+cat A
+cat < A
+tr 'a-z' 'A-Z'
+tr 'a-z' 'A-Z' A
+tr 'a-z' 'A-Z' < A
+ls -l 
+ls -l | tr 'a-z' 'A-Z' 
+ls -l > b
+cat b
+tr 'a-z' 'A-Z' < b
+cat b
+cat A
+ex A
+uname -a
+vi first
+ls 
+./first
+ls -l first 
+chmod u+x first 
+./first
+vi first
+./first
+cat first 
+vi secomd
+vi second
+ls
+cd tcs/
+var=10
+echo "value of var is $var"
+echo value of var is $var
+echo 'value of var is $var'
+var=`ls -l`
+echo "var is $var"
+echo var is $var
+var='ls -l'
+echo var is $var
+echo "var is $var"
+cat A
+var=`cat A`
+echo "var is $var"
+echo 10 + 20
+expr 10 + 20
+var=10
+expr $var + 20
+var=`expr $var + 20`
+echo "var is $var"
+var=`expr $var + 20`
+echo "var is $var"
+var=`expr $var + 20`
+echo "var is $var"
+ls
+echo *
+echo 10 * 20
+expr 10 * 20
+echo 10 '*' 20
+echo 10 "*" 20
+echo 10 \* 20
+expr 10 \* 20
+expr 10 "*" 20
+expr 10 '*' 20
+echo "var is $var"
+vi varOne
+chmod 755 varOne
+ls -l varOne 
+./varOne 
+cat varOne 
+bash
+echo "var is $var"
+export var
+./varOne 
+bash
+ps f
+echo $PS1
+echo "hello \nworld"
+echo -e "hello \nworld"
+echo -e "\e[32mRed text\e[0m"
+echo -e "\e[30mRed text\e[0m"
+echo -e "\e[31mRed text\e[0m"
+echo -e "\e[31m Some text HERE\e[0m"
+echo -e "\e[31mSome text HERE\e[0m"
+echo -e "\e[32mSome text HERE\e[0m"
+echo -e "\e[34mSome text HERE\e[0m"
+echo -e "\e[35mSome text HERE\e[0m"
+echo -e "\e[33mSome text HERE\e[0m"
+echo -e "\e[36mSome text HERE\e[0m"
+echo -e "\e[37mSome text HERE\e[0m"
+echo -e "\e[37Some text HERE\e[0m"
+echo -e "\e[37mSome text HERE\e[0m"
+* 40mSome text HERE\e[0m"
+* xt HERE\e[0m"
+echo -e "\e[37;41mSome text HERE\e[0m"
+env
+ls
+alias
+oldbackup=$PS1
+PS1='$ '
+PS1='\w$ '
+PS1='\t$ '
+PS1='\d$ '
+PS1='\u$ '
+PS1='\h$ '
+hostname
+PS1=$oldbackup
+echo 'any command here
+next line here
+another line here'
+echo $PS2
+ps
+echo $$
+test 10 -eq 20
+echo $?
+cat A
+echo $?
+cat a
+echo $?
+cat test123
+echo $?
+man ls
+man test
+man ping
+ping -c4 www.google.com
+echo $?
+ping -c4 www.dsafasdfa dsf.com
+echo $?
+cmd
+echo $?
+vi showerrors.c
+gcc showerrors.c
+vi showerrors.c
+gcc showerrors.c
+./a.out 
+vi testCmdOne
+chmod 755 testCmdOne
+./testCmdOne 
+echo $?
+./testCmdOne 10
+./testCmdOne 10 20
+echo $?
+./testCmdOne one two
+./testCmdOne 'one two threee' onemore
+* ./testCmdOne one two threee onem[Aor
+mkdir .trash
+mv A .trash/
+ls .trash/
+touch A
+ls
+mv A .trash/A(1)
+ls
+mv A .trash/A\(1\)
+ls .trash/
+alias rm='echo '
+rm A
+rm A b abc some more things
+unalias
+unalias rm
+ls
+cat b
+cat etest 
+cat etest b 1> myoutput 2> myerror
+ca myoutput 
+cat myoutput 
+cat myerror 
+cat <&0 
+echo "dlsfja ksdlkfjlkdsj"
+./testCmdOne 
+./testCmdOne > myoutput 
+./testCmdOne 2> myoutput 
+cat myoutput 
+cat testCmdOne 
+cd dirTwo 
+echo $?
+cd dirTwo || echo "dirTwo mesg here"
+cd dirTwo || echo "dirTwo mesg"
+cd dirTwo 2>myerror|| echo "dirTwo mesg"
+cat myerror 
+rm myoutput myerror 
+cd dirTwo 2>/dev/null || echo "dirTwo mesg"
+cd dirOne 2>/dev/null || echo "dirTwo mesg"
+cd ..
+ls
+cat b

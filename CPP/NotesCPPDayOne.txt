@@ -1,0 +1,30 @@
+Day 1:
+------
+	Introduction to C++
+-----------------------------------------------------------------
+		1. writing hello world ..
+		2. compiling 
+		
+		What is the compilation process for c/c++.
+			The compilation process is the steps involved in the process of converting/compiling your source code(which is in user understandable format) to binary (machine understandable format).
+=================================================================
+				first.cpp (ASCII)
+					|
+					| ---> pre-processing 
+					|
+				source Code (.i)
+					|
+					| ---> compilation(Phase I) ()
+					|
+				object Code (.o)
+					|
+					| ---> linking(Phase II)
+					|
+				first/a.out (excutable /binary)
+======================================================
+What is pre-processing?
+	pre-processing directives:
+		#include <filename>
+		
+		#include "filename"
+======================================================

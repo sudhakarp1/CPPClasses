@@ -1,0 +1,40 @@
+Linux System Programming:
+------------------------
+	introduction to system calls
+	=============================
+		A system call is an entry point into the Linux kernel.  
+		system calls are not invoked directly:  instead,  most  system calls have corresponding C library wrapper functions which perform the steps required (e.g., trapping to  kernel  mode) in  order  to  invoke the system call.  Thus, making a system call looks the   same as invoking a normal library function
+		
+		
+		File Descriptor Table(FDT)
+		-------------------------
+			For every open file, there is an entry in this table (data structure) which is maintained by your kernel. Each process has its own FDT, which is an array of pointers to file descriptors.
+			
+			File Descriptors (FD) are small unsigned integers which speciefies the index of file entries in FDT 
+			The first 3 FDs are 
+				0	--> standard input (stdin)
+				1	--> standard output (stdout)
+				2	--> standard error (stderr)
+				
+			write is a system call, where the first argument is a FD 
+			
+				ssize_t write(int fd, const void *buf, size_t count);
+			
+
+		class FileHandler{
+			string filename;
+			int fd;
+			char byte;		
+		public:
+			FileHandler(const char *fn, const char *mode = "r");
+			~FileHandler();
+			
+			void reader(char &ch);
+			void writer(char ch);
+			void copier(const FileHandler &);
+			void redirector(int fd);
+		};
+
+
+			
+			

@@ -1,0 +1,173 @@
+3.	A Puzzle or a  real time problem (Greedy Daughters problem) :
+		A farmer has 3 daughters, has a mango farm. 
+		He keeps some mangoes in the store for equal distribution.
+		for example :		
+	Total mangoes 25.
+			
+		1st daughter tastes 1 +  X / 3 --> Y --> 1 + 8 --> 9 ==> 16
+		2nd daughter tastes 1 +  X / 3 --> Y --> 1 + 5 --> 6 ==> 10
+		3rd daughter tastes 1 +  X / 3 --> Y --> 1 + 3 --> 4 --> 6
+		Father comes home 6 / 3 --> 2 each daughter		
+==========================================================================
+Functions:
+==========
+	The concept of programming?
+		the concept of sub-tasking(dividing the problem into smaller parts/problems called sub-problems or sub-program). 
+	--------------------------
+	calendar.cpp 
+		isLeap(year);
+		.
+		.
+		.
+	===========================
+	bitOps.cpp 
+	
+		bitState(num, pos);
+		bitToggle(num, pos);
+		toggleNibble(num, pos);
+		leftRotate(num, pos);
+		rightRotate(num, pos);
+	----------------------------------------------------------
+	numProbs.cpp 
+		
+		evenOddSeries(num);
+		primeSeries(num);
+		multiTable(num);
+		greedyDaughters(5); #print first 5 scenarios
+	-----------------------------------------------------------	
+memory layout of a program:
+	Different segments
+		from lower address to higher address 		
+			text segment 
+			data (initialized data segment)
+			bss (uninitialized data segment)
+			heap (grows dynamically from lower address to higher address)
+			stack (grows dynamically from higher address to lower address)
+		other segments are also involved 
+			storing constant/Read only data 
+			Dynamic Link Libraries(DLL) info 
+			
+Stack:
+	This segment is part of dynamically(which grows/shrinks at runtime).
+	this segment involves functions. (not the code part of the function but the data part of the function)
+	for example:
+		
+		weekDay(1,9,2024); //ere 1, 9, 2024 are actual arguments
+		
+	recursion:
+	---------
+		Based on number of calls 
+			single recursion 
+			binary recursion
+				fibo(num){
+					return fib(num - 1) + fibo(num - 2 );
+				}
+				
+				for (i=0;n<length;++i)
+					fun()
+					
+			multiple recursion 
+			
+			
+		Depending on direct or indirect :
+			direct recursion
+			indirect recursion
+			
+		1. print 1 to 10 using direct recursion 
+		2. print factorial of a given number using recursion
+		3. print fibonacci series of any given number 
+		4. print given number in reverse order using recursion
+		5. print the multiplication table using multiple recursion
+		
+	
+
+Arrays and strings(C Style):
+----------------------------
+	int arr[100];
+	
+	initialization of arrays:
+		int arr[100]; //uninitialized
+		
+	1. Declare an array of 100 elements. accept first element value;
+	
+	enter first value: 100
+	100 101 102 103 104 105 ... 199
+	
+	2. 
+		a. Sum of all the elements in the array 
+		b. average 
+		c. sum of even numbers 
+		d. sum of odd numbers
+	
+	3.	check each and every element for prime, if prime leave as it is, else make it zero. Print the final array (will have prime number as zeroes) 
+
+	0 101 0 103 0 0 0 107 ... 	
+
+
+
+	int len = sizeof(arr) / sizeof(arr[0]);
+	
+		==> 400 / 4 --> 100
+		
+======================================================================
+	C Style strings (zero/null terminated strings)
+	----------------------------------------------
+		char str[] = {'a','b','\0'};
+		
+		'A' ==> 65 
+		.
+		.
+		'Z' ==> 90
+		'0' ==> 48
+		.
+		.
+		'9' ==> 57
+		
+		'\0' ==> 0 --> 0000 0000 --> null character
+		EOF  --> -1 or 255 --> 1111 1111 
+		
+		
+		char str[] = "Strings here";
+				==> ['S','t','r','i','n','g','s',' ','h','e','r','e','\0']
+		char var[30];
+
+		myStrcpy(var, str);	
+		
+		
+		void myStrcpy(char dest[], char src[]);
+		
+		int myStrcmp(char str1[], char str2[]);
+			'hello', 'hello' ==> 0 
+			'hello' , 'hello world' ==> -1
+			"Hello", "hello" ===> -1
+			
+			'hello world', "hello" --> 1
+			"hello", "Hello" --> 1
+			
+=================================================================
+	cin.getline(str, 30);
+
+
+
+
+
+
+
+				
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+

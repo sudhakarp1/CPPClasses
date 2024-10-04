@@ -1,0 +1,39 @@
+	 Inheritance
+		function hiding
+	    Ctor and Inheritance
+	    public,protected,private (scope)(Access Modifier)
+	    multi level inheritance
+		object Slicing
+		
+ Polymorphism
+		publicizers(changing scope in derived class)[veritical acess control]
+		pure virtual function
+		abstract class
+		Principles 
+	
+	
+	Virtual function internal
+        vptr -> vtable
+        overriding
+        Compiler Synthesized Destructor
+        CRTP
+        Multiple Inheritance
+        Virtual function in multiple inheritance
+        override
+		
+Smart Pointer
+    Functor
+	Callbacks[function pointer,member function pointers]
+    Relationships (Has-A) 
+    unique_ptr
+    shared_ptr
+
+    Template
+    Template Specialization
+    Template Overloading
+    type inference (auto)
+	
+	Lambda expression
+    Capture by reference and by value
+    Lambda with inspector and mutator
+	

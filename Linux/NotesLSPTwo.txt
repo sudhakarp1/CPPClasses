@@ -1,0 +1,56 @@
+Process:
+========
+		What is a process?
+			
+			
+			printf("Hello from Parent...--> %d\n", getpid());
+			printf("Hello from Child...--> %d\n", getpid());
+			
+			
+			from my main(parent) process, create 5 child processes without any grandchild.
+			
+		Process Termination:
+			Normal termination
+				1. return from main 
+				2. exit()  --> <stdlib.h>
+				3. _exit() --> <unistd.h>				
+				
+			Abnormal termination
+				4. signals 
+				5. runtime error 
+				
+		typedef int pid_t ;		
+===========================================================
+Command line arguments and environment variables 
+	<stdlib.h> 
+		extern char **environ;
+		char * getenv(const char *);
+			setenv()
+			
+		--------------------------------------
+		int main(int argc, char *argv[], char *env[]){
+			for(int cnt = 0; env[cnt] != NULL; ++cnt)
+				printf("env[%d] --> %s\n", cnt ,env[cnt]);
+		}
+	--------------------------------------------------------------
+		wait()
+		waitpid()
+		1. What are these functions 
+		2. Why we use in parent process 
+		3. What if we dont use 
+		
+
+
+
+		
+
+
+
+
+
+			
+			
+			
+			
+			
+			

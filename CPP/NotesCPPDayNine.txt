@@ -1,0 +1,11 @@
+Day 9:
+-----
+
+	Matrix (fixed size @ compile time)
+			Dynamic memory allocation(size at runtime) 
+			
+		Addition,
+		subtraction,
+		Multiplication
+===========================================================
+	

@@ -1,0 +1,70 @@
+User: 		24STA2620-U01	
+password: 	Password@1
+
+URL : https://cloud.cdp.rpsconsulting.in/console/#
+
+inside your windows VM
+	open oracleVM Virtual box 
+		start the ubuntu OS
+				user name : rps 
+				password : rps@123
+=====================================================
+What is pre-processing?
+	pre-processing directives:
+		#include <filename>
+		
+		#include "filename"
+=======================================================
+data types in C++
+-----------------
+Built in types:
+--------------
+	char 		--> 1 byte 
+	int 
+				--> 4 bytes 
+		short 	--> 2 bytes 
+		long 	--> 8 bytes 
+
+	float 		--> 4 bytes 
+	double 		--> 8 bytes 
+==============================================
+Derived Types:
+--------------
+	arrays
+			1 dimensional arrays
+			2 dimensional arrays
+			.
+			.
+			.
+	strings 
+			C Style 	--> null/zero terminated char arrays 
+			C++ Style 	--> string class part of C++ Standard library
+	
+	Pointers:
+==========================================================
+User Defined Types:
+------------------
+	struct 
+	class 
+	union
+	enum
+	typedef 
+=============================================================
+Operators in C++:
+----------------
+  categorize based on usage...
+	1. arithmetic operators 
+		+, -, *, /, %
+	2. Relational operators
+		<, >, <=, >=, ==, !=
+	3. Logical operators
+		&&, ||, !
+	4. Bitwise operators
+		<<(left shift), >> (right shift), & (bitwise and), | (OR), ~ (complement) , ^ (XOR)
+	5. Increment/decrement
+		++, --
+	6. Compound assignment 
+		+=, -=, *=, /=, %=, <<=, >>=, &=, |=, ^=
+	7. Others/special 
+		[], (), *, &, . , ->, .*, ->*, ::, ?:, ..., new , delete, new[], delete[]
+======================================================================

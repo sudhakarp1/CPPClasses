@@ -1,0 +1,123 @@
+Day Two:
+========
+
+	file attribute related commands:
+		chmod, chown, chgrp, touch, ln
+		
+	file data related commands / filter commands 
+		I/O Redirection, command piping
+		vi editor,
+		
+		cat, wc, tr,head, tail, cut, sort, cmp, comm,  diff,  patch, 
+
+	compression 
+		tar, 
+		zip/unzip, gzip/gunzip, bzip2
+		
+	Process Related commands
+		ps, top, kill, jobs, bg, fg 
+	
+https://git.kernel.org/torvalds/t/linux-6.11-rc6.tar.gz
+====================================================
+
+rwx --> Read, Write, eXecute
+	3 users here 
+	
+rwx	--> user --> read, write, eXecute
+r-x --> group --> read , eXecute
+r-x	--> other --> read, eXecute
+
+	111 --> rwx 
+	100 --> r-- --> 4
+	010 --> -w- --> 2	
+	001 --> --x --> 1
+    
+	111 --> 7
+	110 --> 6	
+	101 --> 5
+	011 --> 3
+symbolic mode:
+		rwx --> ugoa --> user, group,others, all 
+		+ --> granting permission
+		- --> remove permission
+		= --> assign permission
+	chmod u+x A a 	
+===========================================	
+	vi editor
+		visual editor 
+		
+		there are 3 modes 
+			navigation mode  (hjkl, b,w, gg, G, 0, $)
+				yy --> yank(copy) a line 
+				dd  --> delete(cut) a line 
+				p/P --> paste the line below/above 
+				u --> undo 
+				ctrl + r --> redo 
+				
+			edit mode (a,i,A,I, o,O, R, s, S)
+			ex(last line command) mode --> from navigation mode type : 
+				w --> write or save 
+				q --> quit 
+				q! --> quit forcefully 
+				w! --> write forcefully
+				wq --> x --> write and quit
+				s --> substitute --> find and replace 
+				/search --> find a word 
+				num ---> jump to that line num 
+======================================================
+Intro to Basic Shell scripting:
+------------------------------
+	What is a shell script?
+		Sequence of commands(specific to that shell) written in a text file is referred to as a script file.
+		
+	Shell script on bash> bash shell script
+	
+	variables in shell:
+	
+	
+		var=value 
+		
+	there are 3 quotes in your keyboard
+		'  --> single qoute
+		"  --> double quote
+		`  --> back quote
+	
+	user defined variables ==> var=value 
+	environment variables --> export 
+	built-in/shell variables  -->
+		$ --> value in variable
+		 @
+		 *
+		 ?
+		 !
+		 $
+		 #
+		built-in ENVIRONMENT variable 
+			 IFS
+			 HOME
+			 PWD
+			 OLDPWD
+			 PS1
+			 PS2
+			 USER
+		 
+	 \u@\h: \w $
+	 
+	 
+	 test command ---> for comparison
+		comparing numbers 
+		comparing strings 
+		comparing files 
+		
+	test 
+		or 
+	[ ]
+	
+	file descriptor
+		kernel assigns number(small unsigned) to opened files fro any process and these numbers are referred to as file descriptors
+		
+		by Default 
+			0 --> standard input device (keyboard)
+			1 --> standard output device (console)
+			2 --> standard error device (console)
+			

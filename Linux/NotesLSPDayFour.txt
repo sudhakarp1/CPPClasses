@@ -1,0 +1,60 @@
+Signals (software interrupts)
+	signals and signal handling
+
+		Posix standarized signals 
+			0 --> 31 --> 
+		
+			trap --> command used in shell scripts for handling signals
+		
+
+			signal()
+			
+			struct sigaction 
+				sigemptyset() 
+				sigaddset()
+				
+				sigprocmask()
+				sigaction() 
+			
+			
+			kill(2)
+			raise(3)
+================================================================
+
+System V IPC  (Kernel Level)
+	Message Queues 
+		<sys/msg.h>
+		msgget() --> id 
+		msgsnd()
+		msgrcv()
+		msgctl()
+		
+	Shared Memory 
+		<sys/shm.h>
+		shmget()
+		shmat()
+		shmdt()
+		shmctl()		
+		
+	Semaphore sets 
+		<sys/sem.h>
+		semget()
+		semop()
+		semctl()	
+
+	
+POSIX IPC (Kernel Level)
+	Message Queues 
+		<mqueue.h>
+			mq_open(3)
+			mq_send(3)
+			mq_receive(3)
+			mq_close(3)
+			mq_unlink(3)			
+	Shared Memory 
+	
+	Semaphore sets 
+	
+	
+	Sockets (Full Duplex)
+	

@@ -1,0 +1,122 @@
+ Friend Function
+ 
+ operator overloading
+		Binary(+) and unary operator(-,++)
+		operator<<
+		casting operators(Explicit keyword)
+		new and delete operator
+		Subscript operator[]
+ 
+ Inheritance
+		function hiding
+	    Ctor and Inheritance
+	    public,protected,private (scope)(Access Modifier)
+	    multi level inheritance
+		object Slicing
+		
+ Polymorphism
+		publicizers(changing scope in derived class)[veritical acess control]
+		pure virtual function
+		abstract class
+		Principles 
+=====================================================
+
+	res = a + b * c /e - f ;
+	
+	res = a.Add(b).Mult(c).Div(e).Sub(f);
+	
+	Operator overloading:
+	---------------------
+		Providing additional operation on existing operators on your data types(user defined data types (class/struct).
+		
+	returnType function(argument); //syntax	for normal function
+for operator overloading:
+-------------------------	
+	returnType operator(op)(argument);
+	
+	for example:	
+	------------
+	Overloading as member functions:
+	
+		in case of unary operator:
+		-------------------------
+			returnType operator-(); //no argument here 
+		
+		in case of binary operator:
+		---------------------------
+		
+			returnType operator+(argumentType)
+			
+			Num operator+(int);
+			Num operator+(const Num&);
+===============================================================
+	Friend functions :
+	------------------
+		Non-member functions of a class which can access private members of a class through an object of the class 
+		
+		
+	Friend classes
+	This pointer
+---------------------------------------------------------------
+	Num a = 10;
+	Num b = 10 + a; //non-member function
+	
+
+
+	MyString one = "Some string here";
+	MyString two = one + " Hello";
+	
+	MyString three = "World" + two; //non-member function
+	
+	Limitation on operator overloading:
+	-----------------------------------
+		1. C++ allows you to overload almost all the operators except these 5 operators 
+			:: (Scope resolution)
+			:? (conditional)
+			. (dot or member access)
+			sizeof()
+			typeid()
+	=========================================================		
+		2. You cannot change the syntax(unary/binary) and the precedence of operators.
+
+		3. You cannot introduce new operators which are not supported by C++.
+		
+		[] --> subscript can be overloaded 
+		() --> function operator, if a class has this operator overloaded it is called FUNCTOR (FUNCtion operaTOR) class 
+		
+		By using these functor classes we can achieve function callback (In C we use pointer to function (function pointer))
+		
+	=================================================	
+		
+	Inheritance:
+	------------
+		also known as derivation, that is extending the functionality of new class is derived from existing class.
+		
+		Inheritance is used when there "IS A" relationship
+		//
+		car is a vehicle
+		employee is a person
+		student is a person
+		developer is an employee
+	=========================================================
+		composition/containment or aggregation
+		--------------------------------------
+			car has an engine --> Whole and part relationship
+			animal has eyes 
+	==========================================================
+		Existing class --> Parent/Super/Base class  	
+		New class --> Child/Sub/Derived class 
+		
+		class Base{
+		public:
+			void fun(){cout<<"Base::fun()"<<endl;}
+		};	
+		class Derived: public Base{
+		};		
+			
+		int main(){
+			Derived d; 
+			d.fun();
+		}	
+	=============================================================		
+

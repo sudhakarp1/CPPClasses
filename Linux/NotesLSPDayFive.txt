@@ -1,0 +1,58 @@
+POSIX IPC (Kernel Level)
+	Message Queues 
+		<mqueue.h>
+			mq_open(3)
+			mq_send(3)
+			mq_receive(3)
+			mq_close(3)
+			mq_unlink(3)			
+	Shared Memory 
+	
+	Semaphore sets 
+	
+============================================================
+	tinyurl.com/ez2knje2
+	
+GDB
+	GNU DeBugger
+		
+	g++ sample.cpp 
+	gcc sample.c 	 
+	
+		run or r 
+		b or break line number or function name
+		n or next (step out/without stepping in )
+		s or step (step into)
+		continue (till next break point or end of program)
+		finish 
+		quit or q 
+		display 
+		p or print variable name
+		info 
+		info break 
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	Sockets (Full Duplex)
+	

@@ -1,0 +1,12 @@
+Day Eight(8):	
+-------------
+	dynamic memory allocation:
+	
+		int *ptr = new int(10);
+		
+		cout<<"ptr: "<<ptr<<"\t*ptr"<<*ptr<<endl;
+	
+=============================================================
+	Reference variable in C++
+	scope resolution operator 
+=============================================================

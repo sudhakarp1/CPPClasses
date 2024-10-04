@@ -1,0 +1,66 @@
+Constructors and Destructor
+---------------------------
+	These are all special methods/member functions in a class.
+	1. the name is same as class name 
+	2. do not have any return type not even void 
+	3. the are automatically called when an object is created.
+	
+	Destructor:
+		~className(){
+		} 
+===============================================================
+Different members of a class 
+	const members
+		const data members 
+		const methods/member functions
+	mutable data members
+	static members 
+	
+	Pointer as a data members	
+		Shallow copy
+		Deep copy 
+		
+	default ctor synthesis
+	copy ctor[parameter,return values]
+	R-value object,R-value Reference and reference collapse
+	Explicit ctor
+	Heap, Malloc,new , delete, new[] and delete[]
+	Deep Copy v/s Shallow Copy
+		shallow copy with ownership transfer
+		shallow copy with reference count	
+	
+	
+	class Employee{
+		const int id; //instance
+		string name; //instance member 
+		mutable double salary; //non-const instance member 
+		
+		static string compName; //class members
+	};
+	
+	
+	When a class has a const data member, then in your constructors (ctors) we use initializer list for initialization of const data members 
+	
+		Sample(int x = 0): data(x) //initialization
+		{
+			//data = x ; //assignment 
+		}
+		
+		
+	
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

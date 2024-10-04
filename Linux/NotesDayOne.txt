@@ -1,0 +1,130 @@
+OS Concepts:
+------------
+	OS Intro:
+	--------
+		Definition:
+		-----------
+		
+		It is a complex software which acts as an interface between user and hardware.
+			
+		Two types of interfaces:
+
+			CLI --> Command Line Interface (Keyboard)
+			GUI --> Graphical User Interface (Mouse/Pointer)
+			
+		UNIX as an OS --> 
+			Was introduced in 1969 ---> 
+			in 1973 re-written in C language
+			
+			
+		OS 
+			---> User interface (UI)
+			---> Hardware interface (Core Part)
+			
+		In Unix:
+			The CLI (UI) is referred to as shell 
+			The Core part is referred to as kernel
+			
+		UNIX/Linux:
+		-----------
+			UNIX/Linux OS supports different types of files.
+			These can be identified by the first character while using 'ls -l' command 
+			
+			- --> regular file (user data)
+			
+			d --> directory
+			l --> symbolic link(short cut)
+			
+			p --> named pipe(FIFO)
+			s --> socket 
+			
+			b --> Block Special device 
+			c --> character Special device
+	=================================================
+	Kernel:
+		Referred to the core part/ heart of the OS (The actual part).
+		
+		The major part of the OS is to manage the resources. so your kernel acts as the resource manager. 
+		
+		1. hardware/device management
+		2. process management
+		3. memory management
+		4. network management
+		5. file management
+		.
+		.
+===================================================
+Shell:
+------
+	Command interpreter in UNIX/Linux. 
+	
+	The original shell introduced with the UNIX is referred to as Bourne Shell(sh)
+	BSD --> csh --> C Shell
+	Solaris --> ksh --> korn Shell
+	Linux --> bash --> Bourne Again Shell
+	
+	What is a command?
+		
+	types of commands ?
+		1. keyword/reserved word 
+			 ! case  coproc  do done elif else esac fi for function if in select then until while { } time [[ ]]
+		2. alias 
+			user defined internal command. Creating shortcut to existing commands. Session specific.  
+		3. builtin 
+			 :, ., [, alias, bg, bind, break, builtin, case, cd,  command,  compgen,  complete, continue, declare, dirs, disown, echo, enable, eval, exec, exit, export, fc, fg,  getopts,  hash, help, history, if, jobs, kill, let, local, logout, popd, printf, pushd, pwd, read, readonly,  return,  set, shift, shopt, source, suspend, test, times,  trap,  type,  typeset,  ulimit, umask, unalias, unset, until, wait, while.
+		4. function 
+				
+		5. External commands.
+			binary/executable file present in PATH variable specified directories.
+			
+=======================================================
+Commands in Linux:
+------------------
+	We categorize commands, so we remember it
+	
+	general purpose commands 
+		ls , date , pwd, man, info 
+	
+	directory related commands. 
+		mkdir, cd , rmdir 
+		
+	file related commands:
+		cp, mv, rm , rename 
+	
+	file attribute related commands:
+		chmod, chown, chgrp, touch, ln
+		
+	file data related commands / filter commands 
+		I/O Redirection, command piping
+		vi editor,
+		
+		cat, wc, tr, cut, sort, cmp, comm,  diff,  patch, 
+
+	compression 
+		tar, 
+		zip/unzip, gzip/gunzip, bzip2
+
+	UNIX/Linux shell is case sensitive
+
+	fileA.txt --> 500 bytes 
+				512 --> 
+	fileA.txt --> 13k bytes 
+				512 --> 1 BLOCKS size 
+				26 BLOCKS should be used 
+					--> 26 addresses should be stored
+	fileA.txt --> 1 M bytes --> 1024 * 512 * 2
+				512 --> 1 BLOCKS size 
+				2048 BLOCKS should be used 
+					--> 2048 addresses should be stored
+=======================================================
+	cd 
+		/home/sudhakar  --> home directory --> ~ 
+		
+	~$	 cd /usr/bin
+			absolute path 
+	~$	 cd ../../usr/bin/
+			relative path 
+------------------------------------------------------	
+POSIX 
+=====
+wmic bios get serialnumber

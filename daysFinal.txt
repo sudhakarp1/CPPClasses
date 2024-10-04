@@ -1,0 +1,334 @@
+	templates
+	stl
+	
+	Design principles:
+		lsp
+	
+	Design Patterns Intro 
+		singleton
+		factory
+		builder
+===================================================
+
+	UDP Server					UDP Client
+	--------------------------------------
+	
+	socket() 					socket()
+	  |							   |
+	bind()						   |	
+	  |							   |
+	recvfrom()	<-----------	sendto()	
+	  |							   |
+	sendto()	----------->   recvfrom()
+	  |							   |
+	close()						close()
+	
+=========================================================	
+	sd = socket(AF__INET, SOCK_DGRAM, 0);
+	struct sockaddr_in var;
+	struct sockaddr_un var;
+=========================================================
+
+pthreads --> POSIX Thread library
+=================================
+	<pthread.h>
+		-pthread 
+		-l pthread 
+
+	
+	Threads are independent execution units within a process(within a single process we can have multiple threads)
+	
+	Each thread with share pid, ppid , uid, euid, gid , fd table, text , data , bss , heap, signals, signal handlers.
+		stack part of the memory is not shared.
+		
+	thread safety	do not involve shared part of the process. i.e., you do not use static and extern(global) variables.
+	
+	When using these shared data, we have to provide some kind of synchronization like using mutex, semaphore, locking etc..
+		
+	
+	pthread_t threadID;
+	
+	threadID = pthread_create();
+===============================================
+templates:
+		C++ support for generic programming is through templates 
+
+		templates are a powerful feature that allows you to write generic and reusable code. Templates enable you to define functions, classes, and structures that work with any data type. This means you can create a single implementation that can handle different types, reducing code duplication and increasing maintainability.
+	
+	Types of Templates:
+		Function Templates: These allow you to create a function that can operate on different data types.
+		
+		Key Concepts:
+		1.	Type Parameter: The typename T or template<class T> syntax declares a type parameter that can be replaced with any type when the template is instantiated.
+		2.  Instantiation: When you use a template with a specific type, the compiler generates the appropriate version of the function or class. For example, fun(10) or fun<int>(10) and fun<double>(123.234) or fun(123.234) are two distinct functions generated from the fun template.
+		3. Template Specialization: You can define a specific implementation for certain types. This is known as template specialization.
+		
+		Class Templates: These allow you to create classes that can operate with any data type.
+		
+	Benefits(Advantages) of Using Templates
+		1. Code Reusability: Write code once and use it for different types, reducing redundancy.
+		2. Type Safety: Templates are checked at compile time, which provides type safety.
+		3. Performance: Templates can lead to optimized code because they allow the compiler to inline functions and optimize them for specific types.	
+		
+	Templates are a fundamental part of C++ that enable you to write flexible and reusable code. They are extensively used in the Standard Template Library (STL), which provides various data structures and algorithms that leverage templates for maximum efficiency and usability.
+====================================================================
+Standard Template Library (STL):
+	which provides various data structures and algorithms using templates
+	
+	There are plenty of classes in this library.
+	
+	The Standard Template Library (STL) is a powerful and integral part of C++ that provides a collection of generic classes and functions for common data structures and algorithms. 
+	
+	The STL is designed to help developers efficiently manage collections of data and perform operations on them.
+	
+	Of these classes, we can categorize them into groups for better understanding.
+	
+	1. Container classes 
+	2. Iterator classes 
+	3. Algorithms 
+	
+	Container Classes:
+	------------------
+		These are data structures that store objects and data. STL provides several types of containers:
+	
+		Sequence Containers: Store elements in a linear order 
+			std::vector: Dynamic array that can resize itself.
+			std::list: Doubly linked list allowing fast insertions and deletions.
+			std::deque: Double-ended queue that allows insertion/removal at both ends.
+			
+		Associative Containers: Store elements using keys for fast retrieval.
+			std::set: Collection of unique elements (sorted).
+			std::map: Collection of key-value pairs with unique keys (sorted by key). (equivalent to dictionary in Python)
+			
+		Unordered Associative Containers: Store elements with average constant-time complexity for lookups.
+			std::unordered_set: Unique elements stored in no particular order.
+			std::unordered_map: Key-value pairs with unique keys stored in no particular order.	
+			
+		Container Adapters: Provide a different interface for existing containers.
+			std::stack: Last-in, first-out (LIFO) data structure.
+			std::queue: First-in, first-out (FIFO) data structure.
+			std::priority_queue: Elements sorted by priority.	
+	
+	2. Iterator Classes
+		Iterators: Iterators are objects that provide a way to access the elements of a container sequentially without exposing the underlying structure. They can be thought of as generalizations of pointers. STL supports various types of iterators:
+		
+		Input Iterators: Read data from a container.
+		Output Iterators: Write data to a container.
+		Forward Iterators: Read and write data, and can be incremented.
+		Bidirectional Iterators: Can be incremented and decremented.
+		Random Access Iterators: Allow direct access to any element in constant time (like pointers).
+		
+	3. 	Algorithms
+	
+		Algorithms: STL provides a rich set of algorithms that can be applied to containers, including:
+
+			Searching (std::find, std::binary_search)
+			Sorting (std::sort, std::stable_sort)
+			Manipulation (std::reverse, std::shuffle)
+			Numeric operations (std::accumulate, std::inner_product)
+		
+	Benefits(Advantages) of Using STL
+		Efficiency: STL is optimized for performance and provides a range of data structures and algorithms that are well-tested and efficient.
+		
+		Code Reusability: You can use generic programming principles to write code that works with any data type.
+		
+		Simplicity: STL abstracts away complex data structures and algorithms, making it easier to implement common programming tasks.
+
+		Conclusion
+			STL is a powerful library that significantly enhances C++ programming by providing well-designed data structures, algorithms, and iterators. It promotes code reuse and helps developers write efficient, readable, and maintainable code.	
+		
+	Design Principles
+	=================
+		Design principles are fundamental guidelines or best practices that help software developers and engineers create effective, maintainable, and scalable software systems. These principles can apply to various aspects of software design, including architecture, code structure, and user interface design. Below are some key design principles:
+		
+		
+		1. SOLID Principles
+			These are five key principles aimed at making software designs more understandable, flexible, and maintainable:
+
+			Single Responsibility Principle (SRP):
+				A class should have only one reason to change, meaning it should only have one job or responsibility.
+			Open/Closed Principle (OCP): 
+				Software entities (classes, modules, functions) should be open for extension but closed for modification. This means you should be able to add new functionality without changing existing code.	
+			Liskov Substitution Principle (LSP): 
+				Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+			Interface Segregation Principle (ISP): 
+				A client should not be forced to depend on interfaces it does not use. This promotes the idea of creating smaller, specific interfaces rather than a large, general-purpose one.
+			Dependency Inversion Principle (DIP): 
+				High-level modules should not depend on low-level modules. Both should depend on abstractions (e.g., interfaces). This helps in reducing the coupling between different parts of the system.
+
+	Design Patterns:
+	----------------
+		"Design Patterns: Elements of Reusable Object-Oriented Software"
+			by 
+				Erich Gamma, 
+				Richard Helm, 
+				Ralph Johnson, and 
+				John Vlissides. 
+				
+		Design patterns are general reusable solutions to common problems that occur in software design. They provide a standard terminology and a conceptual framework to address recurring design issues. Rather than being finished designs that can be directly transformed into code, design patterns are templates or guides that can be adapted to specific situations.
+
+		The "Gang of Four" (GoF) design patterns refer to a collection of 23 foundational design patterns introduced in the book "Design Patterns: Elements of Reusable Object-Oriented Software" by Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides. These patterns are categorized into three main groups: creational, structural, and behavioral patterns.
+		
+		These 23 design patterns were classified into 3 categories 
+		1. Creational Patterns
+		2. Behavioral Patterns
+		3. Structural Patterns	
+		
+		Creational Patterns
+			Singleton: Ensures that a class has only one instance and provides a global point of access to it.
+
+			Factory Method: Defines an interface for creating objects, but lets subclasses alter the type of objects that will be created.
+
+			Abstract Factory: Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+			Builder: Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+
+			Prototype: Creates new objects by copying an existing object, known as the prototype.
+		
+		Structural Patterns
+			Adapter: Allows the interface of an existing class to be used as another interface, making incompatible interfaces compatible.
+
+			Bridge: Decouples an abstraction from its implementation, allowing both to vary independently.
+
+			Composite: Composes objects into tree structures to represent part-whole hierarchies. Clients can treat individual objects and composites uniformly.
+
+			Decorator: Adds responsibilities to individual objects dynamically without affecting other objects of the same class.
+
+			Facade: Provides a simplified interface to a complex subsystem, making it easier to use.
+
+			Flyweight: Reduces the cost of creating and manipulating a large number of similar objects by sharing common parts.
+
+			Proxy: Provides a surrogate or placeholder for another object to control access to it.
+		
+		Behavioral Patterns
+			Chain of Responsibility: Passes a request along a chain of handlers. Each handler decides either to process the request or pass it to the next handler in the chain.
+
+			Command: Encapsulates a request as an object, thereby allowing for parameterization of clients with queues, requests, and operations.
+
+			Interpreter: Defines a representation for a grammar along with an interpreter that uses the representation to interpret sentences in the language.
+
+			Iterator: Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+			Mediator: Defines an object that encapsulates how a set of objects interact, promoting loose coupling by keeping objects from referring to each other explicitly.
+
+			Memento: Captures and externalizes an object's internal state without violating encapsulation, allowing the object to be restored to this state later.
+
+			Observer: Defines a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+
+			State: Allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+			Strategy: Defines a family of algorithms, encapsulates each one, and makes them interchangeable. This allows the algorithm to vary independently from clients that use it.
+
+			Template Method: Defines the skeleton of an algorithm in a base class, allowing subclasses to redefine certain steps without changing the algorithm's structure.
+
+			Visitor: Represents an operation to be performed on elements of an object structure. It allows you to define new operations without changing the classes of the elements on which it operates.
+======================================================================
+		Builder: 
+		
+			Separates the construction of a complex object from its representation, allowing the same construction process to create different representations.
+			
+			The Builder Pattern is a creational design pattern that provides a flexible solution for constructing complex objects. It allows you to create an object step by step, separating the construction process from the representation. This is particularly useful when an object needs to be initialized with many optional parameters or when the construction process involves multiple steps.
+			
+			
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+			
+				
+				
+				
+				
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+			
+			
+			
+			
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		
+		
+		
+		
+		
+		
+		
+stl
+
+
+
+
+
+
+
+

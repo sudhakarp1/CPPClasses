@@ -1,0 +1,102 @@
+Sockets :
+	Socket Programming uses socket API as IPC between processes either on same machine or over a network.
+	
+	Two processes are involved...
+		Client 
+		Server 
+		
+		Address:
+			--> BSD/UNIX address 
+					/location/filename --> a socket file is created 
+			--> IPV4
+				Internet protocol version 4 (31 bit addressing)
+					192.168.1.1
+					10.2.33.55
+					These address refer to the machine address, within each machine we may have multiple apps/applications running(Which are accessing network). In order to differentiate these apps we identify based on port number(unique number for each app).
+					
+					For example there are standard numbers for standard protocols.
+						80 --> http
+						8080 --> https 
+						20 and 21 --> ftp 
+						22 --> ssh
+		protocol:
+		-------		
+			tcp
+			udp 
+			
+		In a typical TCP Client server program, system calls involved 
+		
+		Server 							Client 
+		
+		
+		 socket --> sd 					socket 
+		   |							  |
+		   |							  |							
+		 bind (sd, addr)				  |
+			|							  |
+			|							  |
+		listen (sd, how)				  |
+			|							  |
+			|							  |
+		accept() <--------------	connect()	
+			|							  |
+			|							  |
+		send/write	-------------->recv/read
+			|							  |
+			|							  |
+		recv/read <--------------	send/write
+			|							  |
+			|							  |			
+		close							close
+
+
+		ntohs
+		htons
+		
+		ntohl
+		htonl 	
+		
+				Big Endian
+				Little Endian
+				
+				
+				Byte address 
+					192.168.1.5 ---> left to right 					
+					5.1.168.192 ---> 
+					
+OSI --> Reference model
+===================
+	Applications / apps (Layers)
+	Presentation  (Layers)
+	Session  (Layers)
+	Transport  (Layers)
+	Network 	 (Layers)
+	Data Link	(Layers)	
+	Physical 	  (Layers)	
+			
+TCP/IP: (Protocol Suite)
+-------
+	Application --> http, https, ssh, telnet, ftp, smtp ...
+	Transport  --> TCP/UDP
+	Network --> ICMP/IGMP --> IP (ARP/RARP)
+	NAL (Network --> ) --> combination of physical/data link layer
+	
+		rfc ---> Request for comments 
+		
+		
+		
+	UDP Server					UDP Client
+	--------------------------------------
+	
+	socket() 					socket()
+	  |							   |
+	bind()						   |	
+	  |							   |
+	recvfrom()	<-----------	sendto()	
+	  |							   |
+	sendto()	----------->   recvfrom()
+	  |							   |
+	close()						close()
+	
+=========================================
+	
