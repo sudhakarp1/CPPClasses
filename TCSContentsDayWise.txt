@@ -1,0 +1,202 @@
+C++ Programming(12 Days)
+========================
+Day 1:
+	Naming convention
+	Function overloading
+	extern "C" and extern "C++"
+	default arguement
+	reference
+	Inline functions
+	arrays(Single Dimension and Double Dimension)
+	constexpr.
+	if-init and switch init
+	Range based for loops
+	
+Day 2
+	Object[state,identity,behavior]
+    class [data members and member function]
+    Mutators and Inspectors and static methods
+    Constructor [no default constructors generated]
+    Prefer Initialization over assignment
+    The order of initialization maps to the order of declaration.
+	normal , const and mutable members os a class
+    static and static const.
+    const members should be initialized in all ctors.
+    destructors are called just before the object is released.
+    explicit ctor(one param)
+
+Day 3
+	Contained object constructors are called from container ctor init list.
+	default ctor synthesis
+	copy ctor[parameter,return values]
+	R-value object,R-value Reference and reference collapse
+	Explicit ctor
+	Heap, Malloc,new , delete, new[] and delete[]
+	Deep Copy v/s Shallow Copy
+		shallow copy with ownership transfer
+		shallow copy with reference count
+ 
+Day 4.
+    Friend Function
+	operator overloading
+		Binary(+) and unary operator(-,++)
+		operator<<
+		casting operators(Explicit keyword)
+		new and delete operator
+		Subscript operator[]
+		Prohibit heap object
+		deleted and default function
+		Heap only object
+
+Day 5.
+    Smart Pointer
+    Functor
+	Callbacks[function pointer,member function pointers]
+    Relationships (Has-A) 
+    unique_ptr
+    shared_ptr
+
+    Template
+    Template Specialization
+    Template Overloading
+    type inference (auto)
+    Lambda expression
+    Capture by reference and by value
+    Lambda with inspector and mutator
+
+Day 6
+    std::function
+    std::bind
+    return types in Lambda
+    Lambda and recursion
+    type inference
+	decltype 
+    return type deduce
+    class template
+    class template specialization
+    class template partial specialization
+    template default arguments
+
+Day 7
+   Template and constants
+   Inheritance
+   LSP (Liskov substitution principle)
+   function hiding
+   Ctor and Inheritance
+   public,protected,private (scope)(Access Modifier)
+   multi level inheritance
+   object Slicing
+   Template and inheritance
+   Polymorphism
+   
+Day 8
+   publicizers(changing scope in derived class)[veritical acess control]
+   pure virtual function
+   abstract class
+   Principles
+   Template Method Pattern  
+   virtual Dtor 
+
+Day 9
+	Virtual function internal
+        vptr -> vtable
+        overriding
+        Compiler Synthesized Destructor
+        CRTP
+        Multiple Inheritance
+        Virtual function in multiple inheritance
+        override
+
+Day 10
+     dynamic_cast,reinterpret_cast,static_cast
+     RTTI(runtime type identification)
+     Dual dispatch
+     Hybrid inheritance,virtual base class
+     override and final
+
+Day 11
+    Command Pattern
+    Chain of responsibility
+    NullObject Pattern
+    Decorator
+    Strategy
+    Adapter
+	singleton
+	abstract factory
+	
+Day 12
+     set_terminate, set_unexpected
+     exception handling
+     Nested try
+     mutiple catch
+     cath order
+     exception from ctor and dtor
+     new operator expansion
+     catch any
+     Rethrow
+     Catchtable
+     catch by bv value/reference
+     RAII
+=====================================================
+Linux Basics(3 Days):
+---------------------
+Day 1:
+	Intro to Basic UNIX/Linux Commands
+	UNIX File System 
+	Filters 
+	
+Day 2:
+	Filters (continued...)
+	Intro to Bourne/Bash Shell
+	vi Editor
+	
+Day 3:
+	Process related Commands
+	Intro to Basic Shell scripting
+	
+Linux System Programming(8 Days):
+--------------------------------
+
+Day 1:	
+	Linux file system architecture
+	Linux User space development Tools
+	Virtual address spaces
+	System Calls
+	File APIs (file systems)
+
+Day 2:
+	File system programming
+	File Related System calls
+		open, close, read, write
+		lseek, dup, dup2
+
+Day 3:
+	Process Related System calls 
+		getpid, getppid, getuid,getgid
+		fork and exec family of functions
+		
+Day 4:
+	Intro to Inter Process Communication
+	Pipes
+		Unnamed pipes
+		named pipes 
+	signal handling
+		signal, kill, sigaction
+
+Day 5:
+	IPCs
+		Sys V IPCs 
+		POSIX IPCS 
+			Message Queues
+			Shared Memory
+			Semaphores
+
+Day 6:
+	Intro to Sockets
+		Iterative server/Client using TCP & UDP
+
+Day 7:
+	Intro to Multi-Threading using pthreads library
+		
+Day 8:
+	Concurrent Client Server using Threads and process
