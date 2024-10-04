@@ -1,0 +1,51 @@
+Linux:
+	Basic commands 
+	file/directory Related 
+	filter commands
+		command piping and IO redirection
+		
+	vi editor	
+	Process related commands 
+	shell scripting
+C++:
+	
+	Intro, history, basic data types 
+	compilation process
+		preprocessing ,assembly,compilation, linking
+		headers and library files 
+			static library 
+			dynamic library
+	operators , expression and control structures
+	C++ as better C
+		scope resolution operator 
+		range based for loop, if init and switch init 
+		functions in C++
+			function overloading
+			functions with default values 
+		reference variables 
+			call by value , address and reference
+			lvalue and rvalue reference (int &, int &&)
+	Classes and objects 
+		data members 
+		member functions 
+		instance member
+		class members 
+	Classes and objects 
+		constructors and destructor
+			
+		this 
+		friends
+		operator overloading
+	Inheritance 
+	polymorphism
+	Exception handling 
+	IO and File Handling 
+	
+	Introduction to templates 
+	Design 	Principles
+	Design patterns
+	
+Linux System Programming
+	Introduction 
+	File related system calls 
+	Process Related system calls 
